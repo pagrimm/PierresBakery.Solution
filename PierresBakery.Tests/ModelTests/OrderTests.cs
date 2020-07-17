@@ -53,9 +53,11 @@ namespace PierresBakery.Tests
       Order testOrder = new Order();
       Bread testBread1 = new Bread("Default");
       Bread testBread2 = new Bread("Default");
+      Bread testBread3 = new Bread("Default");
       testOrder.AddBread(testBread1);
       testOrder.AddBread(testBread2);
-      decimal testNumber = 5;
+      testOrder.AddBread(testBread3);
+      decimal testNumber = 10;
       Assert.AreEqual(testNumber, testOrder.GetBreadPrice());
     }
 
