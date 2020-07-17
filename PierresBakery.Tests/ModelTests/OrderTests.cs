@@ -61,5 +61,19 @@ namespace PierresBakery.Tests
       Assert.AreEqual(testNumber, testOrder.GetBreadPrice());
     }
 
+    [TestMethod]
+    public void GetPastryPrice_ReturnsTotalPriceOfAllPastryObjects_decimal()
+    {
+      Order testOrder = new Order();
+      Pastry testPastry1 = new Pastry("Default");
+      Pastry testPastry2 = new Pastry("Default");
+      Pastry testPastry3 = new Pastry("Default");
+      testOrder.AddPastry(testPastry1);
+      testOrder.AddPastry(testPastry2);
+      testOrder.AddPastry(testPastry3);
+      decimal testNumber = 5;
+      Assert.AreEqual(testNumber, testOrder.GetPastryPrice());
+    }
+
   }
 }
