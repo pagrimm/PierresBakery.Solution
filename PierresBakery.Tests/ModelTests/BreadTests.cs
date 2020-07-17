@@ -37,5 +37,11 @@ namespace PierresBakery.Tests
       Assert.AreEqual(typeof(Dictionary<string, decimal>), Bread.GetOptions().GetType());
     }
 
+    [TestMethod]
+    public void GetBreadTypes_ReturnsListOfBreadTypes_List()
+    {
+      List<string> testList = Bread.GetBreadTypes();
+      Assert.AreEqual("White", testList[0]);
+    }
   }
 }
