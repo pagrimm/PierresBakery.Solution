@@ -1,5 +1,5 @@
 # Pierre's Bakery
-**for Epicodus**
+**Indepenent Project for Epicodus**  
 **By Peter Grimm, 07.17.2020**
 
 ## Specifications
@@ -8,6 +8,8 @@
 * A user should be able to specify how many loaves of Bread and how many Pastrys they'd like.
 * The application will return the total cost of the order.
 * Total cost will be calculated using the following deals: Bread: Buy 2, get 1 free. A single loaf costs $5. Pastry: Buy 1 for \$2 or 3 for $5.
+* User can specify different kinds of pastries
+* Prices for those pastries will be calculated with the same deals (adjusted for relative price in the case of pastries)
 
 ## Description
 
@@ -20,7 +22,7 @@ Week 7 project for Epicodus. A program for a bakery that calculates price based 
 * Navigate to the newly created `PierresBakery.Solution` folder
 * Navigate to both the `PierresBakery` and `PierresBakery.Tests` subfolders and run `dotnet restore` in each
 * Navigate to `PierresBakery` subfolder
-* Run `dotnet build` and `dotnet run`
+* Run `dotnet build` to build the app and `dotnet run` to run it
 
 
 ## Technologies Used
