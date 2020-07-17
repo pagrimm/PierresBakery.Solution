@@ -12,5 +12,15 @@ namespace PierresBakery.Models
       BreadList = new List<Bread> {};
       PastryList = new List<Pastry> {};
     }
+
+    public void AddBread(Bread inputBread)
+    {
+      BreadList.Add(inputBread);
+    }
+
+    public void AddPastry(Pastry inputPastry)
+    {
+      PastryList.Add(inputPastry);
+    }
   }
 }
