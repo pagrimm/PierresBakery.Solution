@@ -21,6 +21,14 @@ namespace PierresBakery.Tests
       string testString = "Donut";
       Assert.AreEqual(testString, newPastry.Type);
     }
+
+    [TestMethod]
+    public void GetPrice_ReturnsPriceOfPastryObject_int()
+    {
+      Pastry newPastry = new Pastry("Donut");
+      int testInt = 2;
+      Assert.AreEqual(testInt, newPastry.Price);
+    }
     
   }
 }

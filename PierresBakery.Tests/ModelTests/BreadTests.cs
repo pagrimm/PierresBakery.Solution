@@ -22,5 +22,13 @@ namespace PierresBakery.Tests
       Assert.AreEqual(testString, newBread.Type);
     }
 
+    [TestMethod]
+    public void GetPrice_ReturnsPriceOfBreadObject_int()
+    {
+      Bread newBread = new Bread("French");
+      int testInt = 2;
+      Assert.AreEqual(testInt, newBread.Price);
+    }
+
   }
 }
