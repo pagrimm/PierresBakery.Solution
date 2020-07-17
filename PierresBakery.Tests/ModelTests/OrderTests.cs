@@ -11,32 +11,41 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfClass_Order()
     {
-      Order newOrder = new Order();
-      Assert.AreEqual(typeof(Order), newOrder.GetType());
+      Order testOrder = new Order();
+      Assert.AreEqual(typeof(Order), testOrder.GetType());
     }
 
     [TestMethod]
     public void OrderConstructor_CreatesFieldOfBreadList_List()
     {
-      Order newOrder = new Order();
-      Assert.AreEqual(typeof(List<Bread>), newOrder.BreadList.GetType());
+      Order testOrder = new Order();
+      Assert.AreEqual(typeof(List<Bread>), testOrder.BreadList.GetType());
     }
 
     [TestMethod]
     public void OrderConstructor_CreatesFieldOfPastryList_List()
     {
-      Order newOrder = new Order();
-      Assert.AreEqual(typeof(List<Pastry>), newOrder.PastryList.GetType());
+      Order testOrder = new Order();
+      Assert.AreEqual(typeof(List<Pastry>), testOrder.PastryList.GetType());
     }
 
-    /* [TestMethod]
+    [TestMethod]
     public void AddBread_AddsBreadObjectToOrder_Object()
     {
-      Order newOrder = new Order();
-      Bread newBread = new Bread("French");
-      newOrder.AddBread(newBread);
-      Assert.AreEqual(typeof(Order), newOrder.GetType());
-    } */
+      Order testOrder = new Order();
+      Bread testBread = new Bread("French");
+      testOrder.AddBread(testBread);
+      Assert.AreEqual(1, testOrder.BreadList.Count);
+    }
+
+    [TestMethod]
+    public void AddPastry_AddsPastryObjectToOrder_Object()
+    {
+      Order testOrder = new Order();
+      Pastry testPastry = new Pastry("Donut");
+      testOrder.AddPastry(testPastry);
+      Assert.AreEqual(1, testOrder.PastryList.Count);
+    }
 
   }
 }
