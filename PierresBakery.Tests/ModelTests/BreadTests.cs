@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierresBakery.Models;
+using System.Collections.Generic;
 
 namespace PierresBakery.Tests
 {
@@ -28,6 +29,12 @@ namespace PierresBakery.Tests
       Bread newBread = new Bread("French");
       int testInt = 2;
       Assert.AreEqual(testInt, newBread.Price);
+    }
+
+    [TestMethod]
+    public void GetOptions_ReturnsDictionaryOfBreadClass_Dictionary()
+    {
+      Assert.AreEqual(typeof(Dictionary<string, int>), Bread.GetOptions());
     }
 
   }
