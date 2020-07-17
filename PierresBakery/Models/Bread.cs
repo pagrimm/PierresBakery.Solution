@@ -24,5 +24,25 @@ namespace PierresBakery.Models
     {
       return _priceList;
     }
+
+    public static List<string> GetBreadTypes()
+    {
+      List<string> outputList = new List<string>();
+      foreach(KeyValuePair<string, decimal> entry in _priceList)
+      {
+        outputList.Add(entry.Key);
+      }
+      return outputList;
+    }
+
+    public static List<decimal> GetBreadPrices()
+    {
+      List<decimal> outputList = new List<decimal>();
+      foreach(KeyValuePair<string, decimal> entry in _priceList)
+      {
+        outputList.Add(entry.Value);
+      }
+      return outputList;
+    }
   }
 }

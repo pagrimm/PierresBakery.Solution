@@ -43,5 +43,12 @@ namespace PierresBakery.Tests
       List<string> testList = Bread.GetBreadTypes();
       Assert.AreEqual("White", testList[0]);
     }
+
+    [TestMethod]
+    public void GetBreadPrices_ReturnsListOfBreadPrices_List()
+    {
+      List<decimal> testList = Bread.GetBreadPrices();
+      Assert.AreEqual(5, testList[0]);
+    }
   }
 }

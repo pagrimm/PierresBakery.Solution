@@ -43,5 +43,12 @@ namespace PierresBakery.Tests
       List<string> testList = Pastry.GetPastryTypes();
       Assert.AreEqual("Croissant", testList[0]);
     }
+
+    [TestMethod]
+    public void GetPastryPrices_ReturnsListOfPastryPrices_List()
+    {
+      List<decimal> testList = Pastry.GetPastryPrices();
+      Assert.AreEqual(2, testList[0]);
+    }
   }
 }
