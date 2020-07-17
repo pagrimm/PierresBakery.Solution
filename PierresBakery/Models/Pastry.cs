@@ -18,9 +18,9 @@ namespace PierresBakery.Models
       Price = _priceList[Type];
     }
 
-    /* public Dictionary<string, int> getPastryOptions()
+    public static Dictionary<string, int> GetOptions()
     {
       return _priceList;
-    } */
+    }
   }
 }

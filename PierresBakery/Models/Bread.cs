@@ -5,7 +5,7 @@ namespace PierresBakery.Models
 {
   public class Bread
   {
-    private Dictionary<string, int> _priceList = new Dictionary<string, int>()
+    private static Dictionary<string, int> _priceList = new Dictionary<string, int>()
     {
       {"Default", 1},
       {"French", 2}
@@ -18,9 +18,9 @@ namespace PierresBakery.Models
       Price = _priceList[Type];
     }
 
-    /* public Dictionary<string, int> getBreadOptions()
+    public static Dictionary<string, int> GetOptions()
     {
       return _priceList;
-    } */
+    }
   }
 }

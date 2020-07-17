@@ -34,7 +34,7 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void GetOptions_ReturnsDictionaryOfPastryClass_Dictionary()
     {
-      Assert.AreEqual(typeof(Dictionary<string, int>), Pastry.GetOptions());
+      Assert.AreEqual(typeof(Dictionary<string, int>), Pastry.GetOptions().GetType());
     }
     
   }
