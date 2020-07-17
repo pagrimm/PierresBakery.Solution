@@ -24,17 +24,17 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
-    public void GetPrice_ReturnsPriceOfPastryObject_int()
+    public void GetPrice_ReturnsPriceOfPastryObject_decimal()
     {
       Pastry newPastry = new Pastry("Donut");
-      int testInt = 2;
-      Assert.AreEqual(testInt, newPastry.Price);
+      decimal testNumber = 2;
+      Assert.AreEqual(testNumber, newPastry.Price);
     }
 
     [TestMethod]
     public void GetOptions_ReturnsDictionaryOfPastryClass_Dictionary()
     {
-      Assert.AreEqual(typeof(Dictionary<string, int>), Pastry.GetOptions().GetType());
+      Assert.AreEqual(typeof(Dictionary<string, decimal>), Pastry.GetOptions().GetType());
     }
     
   }
