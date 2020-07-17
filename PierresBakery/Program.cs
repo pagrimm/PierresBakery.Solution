@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Template.Models;
+using PierresBakery.Models;
 
-namespace Template {
+namespace PierresBakery {
   public class Program
   {
     public static void Main()

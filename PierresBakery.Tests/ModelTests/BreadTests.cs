@@ -1,11 +1,12 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System;
+using PierresBakery.Models;
 
-namespace Class.Tests
+namespace PierresBakery.Tests
 {
   [TestClass]
-  public class ClassTests
+  public class BreadTests
   {
 
     [TestMethod]

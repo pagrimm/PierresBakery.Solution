@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Template.Models
+namespace PierresBakery.Models
 {
   
 }

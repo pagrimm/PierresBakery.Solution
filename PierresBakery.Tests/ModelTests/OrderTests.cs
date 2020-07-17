@@ -6,7 +6,7 @@ using PierresBakery.Models;
 namespace PierresBakery.Tests
 {
   [TestClass]
-  public class PastryTests
+  public class OrderTests
   {
 
     [TestMethod]
