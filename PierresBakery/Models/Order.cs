@@ -45,7 +45,36 @@ namespace PierresBakery.Models
           outputPrice += ((entry.Value - Math.Floor(entry.Value / 3)) * entry.Key);
         }
       }
-      return outputPrice;
+      return decimal.Round(outputPrice, 2);
+    }
+
+    public decimal GetPastryPrice()
+    {
+      decimal outputPrice = 0;
+      Dictionary<string, decimal> pastryPrices = Pastry.GetOptions();
+      Dictionary<decimal, decimal> typeCount = new Dictionary<decimal, decimal>();
+      foreach(KeyValuePair<string, decimal> entry in pastryPrices)
+      {
+        if (!typeCount.ContainsKey(entry.Value)) {
+          typeCount.Add(entry.Value, 0);
+        }
+      }
+      foreach(Pastry entry in PastryList)
+      {
+        typeCount[entry.Price] += 1;
+      }
+      foreach(KeyValuePair<decimal, decimal> entry in typeCount)
+      {
+        if (entry.Value > 0)
+        {
+          decimal multiplesOfThree = Math.Floor(entry.Value / 3);
+          decimal pricePerThree = (entry.Key * 3m) * (5m / 6m);
+          Console.WriteLine(multiplesOfThree);
+          Console.WriteLine(pricePerThree);
+          outputPrice += ((multiplesOfThree * pricePerThree) + ((entry.Value - (multiplesOfThree * 3)) * entry.Key));
+        }
+      }
+      return decimal.Round(outputPrice, 2);
     }
   }
 }

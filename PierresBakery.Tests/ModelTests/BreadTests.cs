@@ -27,7 +27,7 @@ namespace PierresBakery.Tests
     public void GetPrice_ReturnsPriceOfBreadObject_decimal()
     {
       Bread newBread = new Bread("French");
-      decimal testNumber = 2;
+      decimal testNumber = 6;
       Assert.AreEqual(testNumber, newBread.Price);
     }
 

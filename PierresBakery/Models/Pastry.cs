@@ -6,7 +6,7 @@ namespace PierresBakery.Models
   {
     private static Dictionary<string, decimal> _priceList = new Dictionary<string, decimal>()
     { 
-      {"Default", 2},
+      {"Croissant", 2},
       {"Donut", 2} 
     };
     public string Type { get; }
