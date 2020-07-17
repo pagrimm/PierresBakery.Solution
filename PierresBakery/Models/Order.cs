@@ -75,8 +75,6 @@ namespace PierresBakery.Models
         {
           decimal multiplesOfThree = Math.Floor(entry.Value / 3);
           decimal pricePerThree = (entry.Key * 3m) * (5m / 6m);
-          Console.WriteLine(multiplesOfThree);
-          Console.WriteLine(pricePerThree);
           outputPrice += ((multiplesOfThree * pricePerThree) + ((entry.Value - (multiplesOfThree * 3)) * entry.Key));
         }
       }
