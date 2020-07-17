@@ -1,6 +1,4 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-using System;
 using PierresBakery.Models;
 
 namespace PierresBakery.Tests
@@ -12,7 +10,8 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void ClassConstructor_CreatesInstanceOfClass_Class()
     {
-      
+      Order newOrder = new Order();
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
   }
