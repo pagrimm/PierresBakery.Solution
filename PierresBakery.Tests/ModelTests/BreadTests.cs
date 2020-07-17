@@ -14,5 +14,13 @@ namespace PierresBakery.Tests
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
 
+    [TestMethod]
+    public void GetType_ReturnsTypeOfBreadObject_string()
+    {
+      Bread newBread = new Bread("French");
+      string testString = "French";
+      Assert.AreEqual(testString, newBread.Type);
+    }
+
   }
 }
