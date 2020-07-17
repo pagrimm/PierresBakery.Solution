@@ -34,7 +34,7 @@ namespace PierresBakery.Tests
     {
       Order testOrder = new Order();
       Bread testBread = new Bread("French");
-      testOrder.AddBread(testBread);
+      testOrder.AddBread(testBread, 1);
       Assert.AreEqual(1, testOrder.BreadList.Count);
     }
 
@@ -43,7 +43,7 @@ namespace PierresBakery.Tests
     {
       Order testOrder = new Order();
       Pastry testPastry = new Pastry("Donut");
-      testOrder.AddPastry(testPastry);
+      testOrder.AddPastry(testPastry, 1);
       Assert.AreEqual(1, testOrder.PastryList.Count);
     }
 
@@ -51,12 +51,8 @@ namespace PierresBakery.Tests
     public void GetBreadPrice_ReturnsTotalPriceOfAllBreadObjects_decimal()
     {
       Order testOrder = new Order();
-      Bread testBread1 = new Bread("White");
-      Bread testBread2 = new Bread("White");
-      Bread testBread3 = new Bread("White");
-      testOrder.AddBread(testBread1);
-      testOrder.AddBread(testBread2);
-      testOrder.AddBread(testBread3);
+      Bread testBread = new Bread("White");
+      testOrder.AddBread(testBread, 3);
       decimal testNumber = 10;
       Assert.AreEqual(testNumber, testOrder.GetBreadPrice());
     }
@@ -65,14 +61,8 @@ namespace PierresBakery.Tests
     public void GetPastryPrice_ReturnsTotalPriceOfAllPastryObjects_decimal()
     {
       Order testOrder = new Order();
-      Pastry testPastry1 = new Pastry("Croissant");
-      Pastry testPastry2 = new Pastry("Croissant");
-      Pastry testPastry3 = new Pastry("Croissant");
-      Pastry testPastry4 = new Pastry("Croissant");
-      testOrder.AddPastry(testPastry1);
-      testOrder.AddPastry(testPastry2);
-      testOrder.AddPastry(testPastry3);
-      testOrder.AddPastry(testPastry4);
+      Pastry testPastry = new Pastry("Croissant");
+      testOrder.AddPastry(testPastry, 4);
       decimal testNumber = 7;
       Assert.AreEqual(testNumber, testOrder.GetPastryPrice());
     }

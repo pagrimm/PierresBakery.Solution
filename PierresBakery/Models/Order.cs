@@ -13,14 +13,20 @@ namespace PierresBakery.Models
       PastryList = new List<Pastry> {};
     }
 
-    public void AddBread(Bread inputBread)
+    public void AddBread(Bread inputBread, int numberOfTimes)
     {
-      BreadList.Add(inputBread);
+      for (int i = 0; i < numberOfTimes; i++)
+      {
+        BreadList.Add(inputBread);
+      }
     }
 
-    public void AddPastry(Pastry inputPastry)
+    public void AddPastry(Pastry inputPastry, int numberOfTimes)
     {
-      PastryList.Add(inputPastry);
+      for (int i = 0; i < numberOfTimes; i++)
+      {
+        PastryList.Add(inputPastry);
+      }
     }
 
     public decimal GetBreadPrice()
