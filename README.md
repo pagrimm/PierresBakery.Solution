@@ -3,13 +3,19 @@
 **By Peter Grimm, 07.17.2020**
 
 ## Specifications
-* There should be two classes: one for Bread and one for Pastry
-* When the user runs the application, they should receive a prompt with a welcome message along with the cost for both Bread and Pastry
-* A user should be able to specify how many loaves of Bread and how many Pastrys they'd like.
-* The application will return the total cost of the order.
-* Total cost will be calculated using the following deals: Bread: Buy 2, get 1 free. A single loaf costs $5. Pastry: Buy 1 for \$2 or 3 for $5.
-* User can specify different kinds of pastries
-* Prices for those pastries will be calculated with the same deals (adjusted for relative price in the case of pastries)
+* Program creates bread and pastry objects
+* Bread and pastry objects have a type
+* Bread and pastry object price is calculated by referencing type against a dictionary
+* Program creates order objects
+* Order objects contain lists of bread and pastry objects
+* Program can add bread and pastry objects to those lists
+* Order object can calculate the price of all bread and pastry objects it contains
+* When the user runs the application they receive a prompt with a welcome message
+* User can select either to add items to cart or checkout which provides a total price
+* User can specify the type of items to add to cart
+* User is presented the price of these items
+* User can specify the number of items to add to the cart
+
 
 ## Description
 
